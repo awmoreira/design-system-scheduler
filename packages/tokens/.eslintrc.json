@@ -1,0 +1,3 @@
+{
+  "extends": "@scheduler-ui/eslint-config"
+}
