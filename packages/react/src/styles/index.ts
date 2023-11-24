@@ -6,6 +6,12 @@ import {
   lineHeights,
   radii,
   space,
+  opacity,
+  gradient,
+  hue,
+  lightness,
+  saturation,
+  shadow,
 } from '@scheduler-ui/tokens'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 
@@ -32,5 +38,11 @@ export const {
     lineHeights,
     radii,
     space,
+    opacity,
+    gradient,
+    hue,
+    lightness,
+    saturation,
+    shadow,
   },
 })

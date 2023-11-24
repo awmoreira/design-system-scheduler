@@ -1,19 +1,13 @@
 export const hue = {
-  text: {
-    main: 240,
-  },
-  brand: {
-    primary: 270,
-    secondary: 191,
-    tertiary: 119,
-    quaternary: 68,
-    quinary: 33,
-    senary: 317,
-  },
-  alert: {
-    danger: 0,
-    warning: 30,
-    success: 115,
-    info: 220,
-  },
+  textMain: 240,
+  brandPrimary: 270,
+  brandSecondary: 191,
+  brandTertiary: 119,
+  brandQuaternary: 68,
+  brandQuinary: 33,
+  brandSenary: 317,
+  alertDanger: 0,
+  alertWarning: 30,
+  alertSuccess: 115,
+  alertInfo: 220,
 }

@@ -1,22 +1,34 @@
-import { colors } from '@scheduler-ui/tokens'
+import { colors, gradient } from '@scheduler-ui/tokens'
 import { getContrast } from 'polished'
 
-export function ColorsGrid() {
-  return Object.entries(colors).map(([key, color]) => {
-    return (
-      <div key={key} style={{ backgroundColor: color, padding: '2rem' }}>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            fontFamily: 'monospace',
-            color: getContrast(color, '#FFF') < 3.5 ? '#000' : '#FFF',
-          }}
-        >
-          <strong>${key}</strong>
-          <span>{color}</span>
+type IColorsProps = {
+  gradientColors?: boolean
+}
+
+export function ColorsGrid({ gradientColors = false }: IColorsProps) {
+  return Object.entries(gradientColors ? gradient : colors).map(
+    ([key, color]) => {
+      console.log('🚀 ~ file: ColorsGrid.tsx:11 ~ ColorsGrid ~ color:', color)
+
+      return (
+        <div key={key} style={{ background: color, padding: '2rem' }}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              fontFamily: 'monospace',
+              color: !gradientColors
+                ? getContrast(color, '#FFF') < 3.5
+                  ? '#000'
+                  : '#FFF'
+                : '#FFF',
+            }}
+          >
+            <strong>${key}</strong>
+            {/* <span>{color}</span> */}
+          </div>
         </div>
-      </div>
-    )
-  })
+      )
+    },
+  )
 }
