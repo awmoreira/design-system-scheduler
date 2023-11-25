@@ -26,7 +26,7 @@ const config: StorybookConfig = {
   },
   viteFinal: (config, { configType }) => {
     if(configType === 'PRODUCTION') {
-      config.base = '/design-system-scheduler/'
+      config.base = '/design-system-scheduler/'      
     }
 
     return config
