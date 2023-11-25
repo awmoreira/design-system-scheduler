@@ -1,12 +1,16 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { Input, TextInputContainer } from './styles'
 
 export type TextInputProps = ComponentProps<typeof Input>
 
-export function TextInput(props: TextInputProps) {
-  return (
-    <TextInputContainer>
-      <Input {...props} />
-    </TextInputContainer>
-  )
-}
+export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
+  (props: TextInputProps, ref) => {
+    return (
+      <TextInputContainer>
+        <Input ref={ref} {...props} />
+      </TextInputContainer>
+    )
+  },
+)
+
+TextInput.displayName = 'TextInput'
