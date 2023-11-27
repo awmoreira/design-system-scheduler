@@ -1,6 +1,8 @@
 {
   "extends": "@scheduler-ui/ts-config/react.json",
   "include": [
-    "src"
+    "src",
+    "custom.d.ts"
   ],
+  "files": ["custom.d.ts"]
 }

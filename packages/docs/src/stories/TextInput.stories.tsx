@@ -7,7 +7,7 @@ export default {
   component: TextInput,
   args: {},
   decorators: [
-    (Story) => {
+    (Story, ctx) => {
       return (
         <Box
           as="label"
@@ -15,10 +15,16 @@ export default {
             display: 'flex',
             flexDirection: 'column',
             gap: '$2',
+            border: 'none',
           }}
         >
-          <Text size="sm">Email address</Text>
+          <Text size="md" error={ctx.args.error}>
+            Label
+          </Text>
           {Story()}
+          <Text size="xs" error={ctx.args.error}>
+            Helper Text
+          </Text>
         </Box>
       )
     },
@@ -27,7 +33,14 @@ export default {
 
 export const Primary: StoryObj<TextInputProps> = {
   args: {
-    placeholder: 'Type your email',
+    placeholder: 'Placeholder',
+  },
+}
+
+export const Error: StoryObj<TextInputProps> = {
+  args: {
+    placeholder: 'Placeholder',
+    error: true,
   },
 }
 

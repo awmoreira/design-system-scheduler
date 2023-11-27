@@ -1,17 +1,17 @@
 import { styled } from '../../styles'
 
 export const TextInputContainer = styled('div', {
-  backgroundColor: '$brandPrimary25',
+  backgroundColor: '$background100',
 
-  borderRadius: '$sm',
+  borderRadius: '$lg',
   boxSizing: 'border-box',
-  border: '2px solid $brandPrimary25',
+  border: '2px solid $background70',
   display: 'flex',
   alignItems: 'center',
   width: '100%',
 
   '&:has(input:focus)': {
-    borderColor: '$brandSecondary25',
+    borderColor: '$brandPrimary50',
   },
 
   '&:has(input:disabled)': {
@@ -26,6 +26,11 @@ export const TextInputContainer = styled('div', {
       },
       md: { padding: '$3 $4' },
     },
+    error: {
+      true: {
+        borderColor: '$alertDanger50',
+      },
+    },
   },
 
   defaultVariants: {
@@ -35,10 +40,10 @@ export const TextInputContainer = styled('div', {
 
 export const Input = styled('input', {
   fontFamily: '$default',
-  fontSize: '$sm',
-  color: '$brandPrimary100',
+  fontSize: '$md',
+  color: '$text',
   fontWeight: '$regular',
-  background: 'transparent',
+  background: '$background100',
   border: 0,
   width: '100%',
 

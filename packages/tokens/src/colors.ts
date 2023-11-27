@@ -16,6 +16,8 @@ export const colors = {
   brandSecondary75: `hsla(${hue.brandSecondary}, ${saturation.max}, ${lightness.xl}, ${opacity.max})`,
   brandSecondary100: `hsla(${hue.brandSecondary}, ${saturation.max}, ${lightness.xxxl}, ${opacity.max})`,
 
+  text: `hsla(${hue.textMain}, ${saturation.min2}, ${lightness.xxs}, ${opacity.mid})`,
+
   background0: `hsla(${hue.brandPrimary}, ${saturation.min}, ${lightness.min}, ${opacity.max})`,
   background10: `hsla(${hue.brandPrimary}, ${saturation.min}, ${lightness.xxxs}, ${opacity.max})`,
   background20: `hsla(${hue.brandPrimary}, ${saturation.min}, ${lightness.xxs}, ${opacity.max})`,

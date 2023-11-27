@@ -8,8 +8,6 @@ type IColorsProps = {
 export function ColorsGrid({ gradientColors = false }: IColorsProps) {
   return Object.entries(gradientColors ? gradient : colors).map(
     ([key, color]) => {
-      console.log('🚀 ~ file: ColorsGrid.tsx:11 ~ ColorsGrid ~ color:', color)
-
       return (
         <div key={key} style={{ background: color, padding: '2rem' }}>
           <div
@@ -25,7 +23,7 @@ export function ColorsGrid({ gradientColors = false }: IColorsProps) {
             }}
           >
             <strong>${key}</strong>
-            {/* <span>{color}</span> */}
+            <span>{color}</span>
           </div>
         </div>
       )
