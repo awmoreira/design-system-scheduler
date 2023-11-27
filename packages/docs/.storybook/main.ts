@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
-
+import { mergeConfig } from "vite";
 import { join, dirname } from "path";
 
 /**
@@ -24,12 +24,24 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  viteFinal: (config, { configType }) => {
+  viteFinal: async (config, { configType }) => {
     if(configType === 'PRODUCTION') {
       config.base = '/design-system-scheduler/'      
     }
 
-    return config
-  }
+    return mergeConfig(config, {
+      build: {
+        chunkSizeWarningLimit: 4096,
+        rollupOptions: {
+          onwarn: ({ message }) => {
+            if (/Use of eval in/.test(message)) {
+              return;
+            }
+            console.log(message);
+          },
+        },
+      },
+    });
+  },
 };
 export default config;
