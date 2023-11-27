@@ -15,7 +15,7 @@ const preview: Preview = {
     },
     docs: {
       theme: themes.dark
-    }
+    },
   },
 };
 

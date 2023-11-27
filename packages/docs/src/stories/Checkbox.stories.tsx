@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Box, Text, Checkbox, CheckboxProps } from '@scheduler-ui/react'
 
 export default {
-  title: 'Molecule/Checkbox',
+  title: 'Atom/Checkbox',
   component: Checkbox,
   args: {},
   decorators: [

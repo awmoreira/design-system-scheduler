@@ -5,7 +5,7 @@ export const CheckboxContainer = styled(Checkbox.Root, {
   all: 'unset',
   width: '$6',
   height: '$6',
-  backgroundColor: '$background70',
+  backgroundColor: '$background100',
   borderRadius: '$xs',
   lineHeight: 0,
   cursor: 'pointer',
@@ -18,7 +18,7 @@ export const CheckboxContainer = styled(Checkbox.Root, {
   border: '2px solid $background70',
 
   '&[data-state="checked"]': {
-    backgroundColor: '$background0',
+    backgroundColor: '$brandPrimary50',
   },
 
   '&:focus, &[data-state="checked"]': {
@@ -44,7 +44,7 @@ const slideOut = keyframes({
 })
 
 export const CheckboxIndicator = styled(Checkbox.Indicator, {
-  color: '$brandPrimary100',
+  color: '$background100',
   width: '$4',
   height: '$4',
 

@@ -3,15 +3,24 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Heading, HeadingProps } from '@scheduler-ui/react'
 
 export default {
-  title: 'Molecule/Heading',
+  title: 'Atom/Heading',
   component: Heading,
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
+  },
 
   args: {
-    children: 'Custom Title',
+    children: 'Heading',
   },
 } as Meta<HeadingProps>
 
-export const Primary: StoryObj<HeadingProps> = {}
+export const Primary: StoryObj<HeadingProps> = {
+  args: {
+    size: '4xl',
+  },
+}
 
 export const CustomTag: StoryObj<HeadingProps> = {
   args: {
