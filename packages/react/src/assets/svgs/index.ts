@@ -1,8 +1,0 @@
-export { default as Error } from './error.svg'
-export { default as Reminder } from './reminder.svg'
-export { default as Loading } from './loading.svg'
-export { default as NotFound } from './notFound.svg'
-export { default as Question } from './question.svg'
-export { default as ResetPassword } from './resetPassword.svg'
-export { default as Stress } from './stress.svg'
-export { default as Success } from './success.svg'

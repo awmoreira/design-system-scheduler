@@ -13,6 +13,14 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    border: {
+      options: ['hidden', 'solid', 'dashed', 'dotted'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
+  },
 } as Meta<BoxProps>
 
 export const Primary: StoryObj<BoxProps> = {}

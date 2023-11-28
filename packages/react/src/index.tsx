@@ -5,10 +5,7 @@ export * from './components/Avatar'
 export * from './components/Button'
 export * from './components/TextInput'
 export * from './components/Checkbox'
-export * from './components/MultiStep'
+export * from './components/Progress'
 export * from './components/Image'
 
 export * from './styles'
-
-// export * from './assets/images'
-// export * from './assets/svgs'
