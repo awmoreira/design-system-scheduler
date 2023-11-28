@@ -1,5 +1,11 @@
 # @scheduler-ui/tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- Change multistep to progress component
+
 ## 2.0.0
 
 ### Major Changes
